@@ -13,6 +13,8 @@
     --secondary-background: #F4F4FD;
     --footer-background: #2E2F42;
     --hover-background: #404BBF;
+
+    --border-color: #E7E9FC;
 }
                             /* додадково */
 .list {
@@ -27,11 +29,11 @@
 .container {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
     width: 1158px;
     padding-right: 15px;
     padding-left: 15px;
+
+    outline: 2px solid tomato;
 }
 .visually-hidden {
     position: absolute;
@@ -54,18 +56,26 @@ body {
     font-family: 'Roboto', 'sans-serif';
     font-size: 16px;
 }
-.ul-content {
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    color: var(--logo-text-color);
+}
+.header-container {
+    display: flex;
+    align-items:center;
+}
+.header-ul {
     display: flex;
     align-items:center;
     gap: 40px;
 }
-.logo {
-    color: var(--logo-text-color);
-    
-}
 .logo-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
     margin-right: 76px;
 
     color: var(--title-text-color);
@@ -75,10 +85,6 @@ body {
     line-height: 1.33;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-}
-.item {
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 .nav-link {
     color: var(--title-text-color);
@@ -105,14 +111,15 @@ body {
                             /* --- main --- */
 .hero {
     text-align: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
 
     background-color: var(--footer-background);
 }
 .hero-title {
     margin: 0 auto;
-    padding-top: 188px;
-    padding-bottom: 48px;
-    max-width: 494px;
+    margin-bottom: 48px;
+    max-width: 500px;
 
     color: var(--hero-text-color);
     font-size: 56px;
@@ -121,7 +128,6 @@ body {
     text-align: center;
 }
 .primary-button {
-    margin-bottom: 188px;
     padding: 16px 32px;
     border-radius: 4px;
     min-width: 169px;
@@ -154,17 +160,18 @@ body {
     color: var(--hover-text-color);
     background-color: var(--hover-background);
 }
-.primary-section {
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
     background-color: var(--primary-background);
 }
-.ul-main {
-    display: flex;
-    align-items:center;
-    gap: 24px;
-    padding-bottom: 120px;
+.section.another {
+    padding-bottom: 0;
 }
-.secondary-section {
-    background-color: var(--secondary-background);
+.main-ul {
+    display: flex;
+    gap: 24px;
 }
 .section-title {
     margin-top: 0;
@@ -178,7 +185,8 @@ body {
     text-transform: capitalize;
 } 
 .section-suptext {
-    margin-top: 120px;
+    padding-top: 32px;
+    margin-top: 0;
     margin-bottom: 8px;
 
     color: var(--title-text-color);
@@ -189,15 +197,15 @@ body {
 }
 .section-text {
     margin-top: 0;
-    margin-bottom: 0px;
-    max-width: 264px;
+    margin-bottom: 0;
+    min-width: 264px;
 
     color: var(--text-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-.team{
-    padding-top: 120px;
+.another-back {
+    background-color: var(--secondary-background);
 }
 .ul-team {
     display: flex;
@@ -205,21 +213,17 @@ body {
     gap: 24px;
     text-align: center;
     width: calc((100% - 72px) / 4);
-    padding-bottom: 120px;
 }
-.section-ultext {
-    margin-top: 32px;
-    margin-bottom: 8px;
+.team-back {
+    padding-bottom: 32px;
 
-    color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    background-color: var(--primary-background);
 }
                             /* --- portfolio --- */
-.navi-btn {
-padding-top: 96px;
+.section.portfolio {
+    padding-top: 96px;
+}
+.nav-btn {
 margin-bottom: 72px;
 display: flex;
 justify-content: center;
@@ -229,16 +233,23 @@ gap: 24px;
     display: flex;
     flex-wrap: wrap;
     align-items:center;
+    width: calc((100% - 24) / 3);
     column-gap: 12px;
     row-gap: 24px;
-    padding-bottom: 120px;
 }
 .pf {
     padding-left: 16px;
+    padding-bottom: 32px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
 }
                             /* ---   --- */
                             /* --- footer --- */
 .footer {
+    padding-top: 16px;
+    padding-bottom: 264px;
+
     background-color: var(--footer-background);
     padding-top: 100px;
     padding-bottom: 100px;
@@ -253,12 +264,10 @@ gap: 24px;
     text-transform: uppercase;
 }
 .footer-text {
-    margin-top: 16px;
-    max-width: 264px;
-    
     color: var(--footer-text-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
+    max-width: 264px;
 }
                             /* ---   --- */
 
