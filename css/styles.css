@@ -32,8 +32,6 @@
     width: 1158px;
     padding-right: 15px;
     padding-left: 15px;
-
-    outline: 2px solid tomato;
 }
 .visually-hidden {
     position: absolute;
