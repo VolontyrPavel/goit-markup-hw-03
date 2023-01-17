@@ -161,8 +161,6 @@ body {
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
-
-    background-color: var(--primary-background);
 }
 .section.another {
     padding-bottom: 0;
@@ -182,6 +180,16 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
 } 
+.section-suptitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
 .section-suptext {
     padding-top: 32px;
     margin-top: 0;
@@ -230,10 +238,11 @@ gap: 24px;
 .ul-portfolio {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    width: calc((100% - 24) / 3);
-    column-gap: 12px;
-    row-gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+.pf-li {
+    width: calc((100% - 48) / 3);
 }
 .pf {
     padding-left: 16px;
@@ -262,6 +271,8 @@ gap: 24px;
     text-transform: uppercase;
 }
 .footer-text {
+    margin-bottom: 0;
+
     color: var(--footer-text-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
